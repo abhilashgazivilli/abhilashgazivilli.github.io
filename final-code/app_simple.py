@@ -58,6 +58,7 @@ def generate_prompt():
 
     # Simple, readable extraction with safe defaults
     name = data.get('name', 'Student')
+    email = data.get('email', '')
     situation = data.get('situation', 'Not specified')
     studies = data.get('studies', [])
     goal = data.get('goal', 'Not specified')
@@ -67,6 +68,7 @@ def generate_prompt():
     prompt = (
         f"Provide short, friendly career advice for the person below:\n"
         f"Name: {name}\n"
+        f"Email: {email}\n"
         f"Situation: {situation}\n"
         f"Education: {studies_text}\n"
         f"Career goal: {goal}\n\n"
